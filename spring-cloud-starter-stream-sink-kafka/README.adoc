@@ -1,0 +1,22 @@
+``//tag::ref-doc[]
+= Kafka Sink
+
+The `Kafka` sink uses the Kafka producer to send message into given Kafka topic.
+
+== Options
+
+The **$$log$$** $$sink$$ has the following options:
+
+//tag::configuration-properties[]
+$$kafka.message-key-expression$$:: $$A SpEL expression (against the incoming message) to evaluate as a message key.$$ *($$Expression$$, default: `$$<none>$$`)*
+$$kafka.topic-expression$$:: $$A SpEL expression (against the incoming message) to evaluate as a target topic.$$ *($$Expression$$, default: `$$<none>$$`)*
+//end::configuration-properties[]
+
+//end::ref-doc[]
+
+== Build
+
+```
+$ mvn clean package
+```
+
